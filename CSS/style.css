@@ -1,17 +1,63 @@
-:root{
-    --background :#FFFFFE;
-    --backgroundInvers :#181818;
+:root {
+    --background: #FFFFFE;
+    --backgroundInvers: #181818;
 }
 
-body{
+body {
     background-color: var(--background);
 }
 
-.overlay{
+.overlay {
     position: fixed;
-    background-color: salmon;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    margin: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.overlay .nav ul li {
+    margin: .8em 0em .8em 0em;
+    writing-mode: vertical-lr;
+    font-family: 'Questrial', sans-serif;
+}
+
+.overlay .sosial-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.overlay .sosial-media .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay .sosial-media .icon a {
+    color: var(--backgroundInvers);
+    margin: .5em 0em .5em 0em;
+}
+
+.overlay .sosial-media .line-up, .overlay .sosial-media .line-down {
+    width: 2px;
+    height: 2em;
+    background-color: #181818;
+}
+
+section .container-portoflio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container-portoflio img {
+    width: 20%;
 }
