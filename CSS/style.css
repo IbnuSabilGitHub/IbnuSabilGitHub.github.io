@@ -5,6 +5,7 @@
 
 body {
     background-color: var(--background);
+    font-family: 'Questrial', sans-serif;
 }
 
 .overlay {
@@ -24,14 +25,13 @@ body {
 .overlay .nav ul li {
     margin: .8em 0em .8em 0em;
     writing-mode: vertical-lr;
-    font-family: 'Questrial', sans-serif;
 }
 
 .overlay .sosial-media {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .overlay .sosial-media .icon {
@@ -45,13 +45,15 @@ body {
     margin: .5em 0em .5em 0em;
 }
 
-.overlay .sosial-media .line-up, .overlay .sosial-media .line-down {
+.overlay .sosial-media .line-up,
+.overlay .sosial-media .line-down {
     width: 2px;
     height: 2em;
     background-color: #181818;
 }
 
-section .container-portoflio {
+section .container-portoflio,
+section .container-name {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -60,4 +62,83 @@ section .container-portoflio {
 
 section .container-portoflio img {
     width: 20%;
+}
+
+section .container-name .ibnu h1 {
+    font-size: 15em;
+    position: relative;
+}
+
+section .container-name .ibnu h1::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 1.7em;
+    background-color: #181818;
+
+    position: absolute;
+    top: -.2em;
+    left: -.1em;
+}
+
+section .container-name .ibnu h1::before {
+    content: "";
+    display: block;
+    width: 1.7em;
+    height: 3px;
+    background-color: #181818;
+
+    position: absolute;
+    bottom: 0;
+    left: -.4em;
+}
+
+/* Responsif */
+/* Tampilan responsif untuk perangkat dengan lebar 1025px hingga 1440px (tablet besar dan layar laptop) */
+@media screen and (max-width: 1440px) {
+
+    html {
+        font-size: 70%;
+    }
+
+    section .container-name .ibnu h1::after {
+        width: 2.8px;
+    }
+
+    section .container-name .ibnu h1::before {
+        height: 2px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /* Atur tampilan sesuai dengan kebutuhan Anda */
+    html {
+        font-size: 40%;
+    }
+
+    section .container-name .ibnu h1::after {
+        width: 2.5px;
+    }
+
+    section .container-name .ibnu h1::before {
+        height: 2px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    /* Atur tampilan sesuai dengan kebutuhan Anda */
+    html {
+        font-size: 30%;
+    }
+
+    section .container-name .ibnu h1::after {
+        width: 2px;
+    }
+
+    section .container-name .ibnu h1::before {
+        height: 2px;
+    }
 }
