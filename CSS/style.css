@@ -8,6 +8,24 @@ body {
     font-family: 'Questrial', sans-serif;
 }
 
+/* Style scroll bar */
+::-webkit-scrollbar {
+    width: .6em;
+    background-color:var(--background);
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #1818185e;
+    border-radius: .6em;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #181818;
+  
+  }
+
+
 .overlay {
     position: fixed;
     top: 0;
