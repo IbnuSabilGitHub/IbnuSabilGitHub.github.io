@@ -11,19 +11,19 @@ body {
 /* Style scroll bar */
 ::-webkit-scrollbar {
     width: .6em;
-    background-color:var(--background);
-  
-  }
-  
-  ::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #1818185e;
     border-radius: .6em;
-  }
+}
 
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: #181818;
-  
-  }
+
+}
 
 
 .overlay {
@@ -70,6 +70,11 @@ body {
     background-color: #181818;
 }
 
+section {
+    margin: 0% 5% 0% 5%;
+
+}
+
 section .container-portoflio,
 section .container-name {
     height: 100vh;
@@ -109,6 +114,32 @@ section .container-name .ibnu h1::before {
     position: absolute;
     bottom: 0;
     left: -.4em;
+}
+
+section .container-about {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+section .container-about main {
+    width: 55%;
+}
+
+section .container-about main h2 {
+    font-size: 6em;
+    margin: 1.4em 0em .3em 0rem;
+}
+
+section .container-about .element {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container-about .element img {
+    width: 84%;
 }
 
 /* Responsif */
