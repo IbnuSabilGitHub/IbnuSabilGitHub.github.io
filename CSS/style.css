@@ -74,6 +74,10 @@ section {
     margin: 10% 5% 0% 5%;
 }
 
+.sectionPORT{
+    margin-top: 0%;
+}
+
 section .container-portoflio,
 section .container-name,
 section .container-skills {
@@ -97,7 +101,6 @@ section .container-name .ibnu h1::after {
     display: block;
     width: 3px;
     height: 1.7em;
-    background-color: #181818;
 
     position: absolute;
     top: -.2em;
@@ -120,10 +123,6 @@ section .container-about {
     height: 100vh;
     display: flex;
     flex-direction: row;
-}
-
-section .container-about main {
-    width: 55%;
 }
 
 section .container-about main h2 {
@@ -151,14 +150,13 @@ section .container-interts .interts  {
 
 
 section .container-about .element {
-    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 section .container-about .element img {
-    width: 84%;
+    width: 37em;
 }
 
 section .container-interts {
@@ -230,6 +228,12 @@ section .container-interts .layer .list-item .item  h3{
 
     section .container-name .ibnu h1::before {
         height: 2px;
+    }
+
+    section .container-about {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10em;
     }
 }
 
