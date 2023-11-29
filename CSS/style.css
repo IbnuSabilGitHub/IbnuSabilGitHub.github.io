@@ -74,13 +74,12 @@ section {
     margin: 10% 5% 0% 5%;
 }
 
-.sectionPORT{
+.sectionPORT {
     margin-top: 0%;
 }
 
 section .container-portoflio,
-section .container-name,
-section .container-skills {
+section .container-name {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -101,6 +100,7 @@ section .container-name .ibnu h1::after {
     display: block;
     width: 3px;
     height: 1.7em;
+    background-color: #181818;
 
     position: absolute;
     top: -.2em;
@@ -125,19 +125,21 @@ section .container-about {
     flex-direction: row;
 }
 
-section .container-about main h2 {
+section .container-about main h2,
+.container-skills main h2,
+section .container-skills main h2 {
     font-size: 6em;
     margin: 1.4em 0em .3em 0rem;
 }
 
-section .container-interts .interts h2{
+section .container-interts .interts h2 {
     font-size: 6em;
     margin: 0em 0em .3em 0rem;
 
 
 }
 
-section .container-interts .interts  {
+section .container-interts .interts {
     text-align: right;
     position: -webkit-sticky;
     /* Safari */
@@ -192,9 +194,103 @@ section .container-interts .layer .list-item .item:hover {
     transform: scale(1.1);
 }
 
-section .container-interts .layer .list-item .item  h3{
+section .container-interts .layer .list-item .item h3 {
     font-size: 2em;
     margin-bottom: .5em;
+}
+
+section .container-skills {
+    height: 100vh;
+}
+section .container-skills main{
+    height: 20%;
+}
+section .container-skills main p {
+    width: 40em;
+    height: 30%
+}
+
+section .container-skills .Skill {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container-skills .Skill .list-skill {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .container-skills .Skill .list-skill svg {
+    margin: 0 1em 0 1em;
+    z-index: 1;
+}
+
+section .container-skills .Skill .list-skill svg path {
+    transition: fill 200ms ease;
+}
+
+.HTML_Logo:hover .path1{
+    fill: #E44F26;
+}
+
+.HTML_Logo:hover .path2{
+    fill: #F1662A;
+}
+
+.HTML_Logo:hover .path3{
+    fill: #EBEBEB;
+}
+
+.HTML_Logo:hover .path4{
+    fill: #FFFFFE;
+}
+
+.JS_Logo:hover .path1 {
+    fill: #F5DE19;
+
+}
+
+.JS_Logo:hover .path2 {
+    fill: #181818;
+}
+
+.CSS_Logo:hover .path1 {
+    fill: #1572B6;
+}
+
+.CSS_Logo:hover .path2 {
+    fill: #33A9DC;
+}
+
+.CSS_Logo:hover .path3 {
+    fill: #FFFFFE;
+}
+
+.CSS_Logo:hover .path4 {
+    fill: #EBEBEB;
+}
+
+.Kotlin_Logo:hover .path1 {
+    fill: url(#hoverGradient);
+}
+
+.CPP_Logo:hover .path1 {
+    fill: #659AD2;
+}
+
+.CPP_Logo:hover .path2 {
+    fill: #00599C;
+}
+
+.CPP_Logo:hover .path3 {
+    fill: #004482;
+}
+
+.CPP_Logo:hover .path4,
+.CPP_Logo:hover .path5 {
+    fill: #FFFFFE;
 }
 
 /* Responsif */
