@@ -25,6 +25,9 @@ body {
 
 }
 
+.container {
+    overflow-x: hidden;
+}
 
 .overlay {
     position: fixed;
@@ -176,7 +179,6 @@ section .container-interts .layer {
 }
 
 
-
 section .container-interts .layer .list-item .item {
     margin: 1.5em 1.5em;
     width: 25em;
@@ -202,9 +204,7 @@ section .container-interts .layer .list-item .item h3 {
 section .container-skills {
     height: 100vh;
 }
-section .container-skills main{
-    height: 20%;
-}
+
 section .container-skills main p {
     width: 40em;
     height: 30%
@@ -220,10 +220,13 @@ section .container-skills .Skill {
 section .container-skills .Skill .list-skill {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7em;
 }
 
 section .container-skills .Skill .list-skill svg {
-    margin: 0 1em 0 1em;
+    /* margin: 0 1em 0 1em; */
     z-index: 1;
 }
 
@@ -293,6 +296,65 @@ section .container-skills .Skill .list-skill svg path {
     fill: #FFFFFE;
 }
 
+
+/* Animation */
+
+.hidden-fade{
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s all;
+
+}
+
+.animation-fade{
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.hidden-right{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-20%);
+    transition: 1s all;
+}
+.animation-right{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+.hidden-left{
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s all;
+    transform: translateX(20%);
+    
+
+}
+
+.animation-left{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+.hidden-up{
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(40%);
+    
+
+}
+
+.animation-up{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
+
+
+
 /* Responsif */
 /* Tampilan responsif untuk perangkat dengan lebar 1025px hingga 1440px (tablet besar dan layar laptop) */
 @media screen and (max-width: 1440px) {
@@ -346,5 +408,46 @@ section .container-skills .Skill .list-skill svg path {
 
     section .container-name .ibnu h1::before {
         height: 2px;
+    }
+    
+    section .container-skills .Skill .list-skill{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    /* Atur tampilan sesuai dengan kebutuhan Anda */
+    html {
+        font-size: 25%;
+    }
+
+    /* section .container-name .ibnu h1::after {
+        width: 2px;
+    }
+
+    section .container-name .ibnu h1::before {
+        height: 2px;
+    }
+    
+    section .container-skills .Skill .list-skill{
+        flex-direction: column;
+    } */
+}
+
+
+/* if screen hight 510 */
+@media screen and (max-height:600px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-height:300px){
+    html{
+        font-size: 40%;
+    }
+    section .container-skills .Skill{
+        font-size: 90%;
     }
 }
