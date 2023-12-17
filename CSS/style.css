@@ -26,8 +26,9 @@ body {
 }
 
 .container {
-    overflow-x: hidden;
+    overflow: clip;
 }
+
 
 .overlay {
     position: fixed;
@@ -36,6 +37,8 @@ body {
     left: 0;
     right: 0;
     margin: 2%;
+    max-width: 100%;
+
 
     display: flex;
     align-items: center;
@@ -90,7 +93,7 @@ section .container-name {
 }
 
 section .container-portoflio img {
-    width: 20%;
+    width: 35%;
 }
 
 section .container-name .ibnu h1 {
@@ -126,6 +129,7 @@ section .container-about {
     height: 100vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 section .container-about main h2,
@@ -133,6 +137,17 @@ section .container-about main h2,
 section .container-skills main h2 {
     font-size: 6em;
     margin: 1.4em 0em .3em 0rem;
+}
+
+section .container-about main p {
+    width: 40rem;
+}
+
+section .container-interts {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+
 }
 
 section .container-interts .interts h2 {
@@ -164,10 +179,6 @@ section .container-about .element img {
     width: 37em;
 }
 
-section .container-interts {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 section .container-interts .layer {
     display: flex;
@@ -234,19 +245,19 @@ section .container-skills .Skill .list-skill svg path {
     transition: fill 200ms ease;
 }
 
-.HTML_Logo:hover .path1{
+.HTML_Logo:hover .path1 {
     fill: #E44F26;
 }
 
-.HTML_Logo:hover .path2{
+.HTML_Logo:hover .path2 {
     fill: #F1662A;
 }
 
-.HTML_Logo:hover .path3{
+.HTML_Logo:hover .path3 {
     fill: #EBEBEB;
 }
 
-.HTML_Logo:hover .path4{
+.HTML_Logo:hover .path4 {
     fill: #FFFFFE;
 }
 
@@ -299,55 +310,56 @@ section .container-skills .Skill .list-skill svg path {
 
 /* Animation */
 
-.hidden-fade{
+.hidden-fade {
     opacity: 0;
     filter: blur(5px);
     transition: 1s all;
 
 }
 
-.animation-fade{
+.animation-fade {
     opacity: 1;
     filter: blur(0px);
 }
 
-.hidden-right{
+.hidden-right {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-20%);
     transition: 1s all;
 }
-.animation-right{
+
+.animation-right {
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0);
 }
 
-.hidden-left{
+.hidden-left {
     opacity: 0;
     filter: blur(5px);
     transition: 1s all;
     transform: translateX(20%);
-    
+
 
 }
 
-.animation-left{
+.animation-left {
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0);
 }
 
-.hidden-up{
+.hidden-up {
     opacity: 0;
     filter: blur(5px);
     transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translateY(40%);
-    
+
 
 }
 
-.animation-up{
+.animation-up {
     opacity: 1;
     filter: blur(0px);
     transform: translateY(0);
@@ -373,6 +385,20 @@ section .container-skills .Skill .list-skill svg path {
 }
 
 
+@media screen and (max-width: 1000px) {
+    section .container-about {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10em;
+    }
+
+    section .container-portoflio,
+    section .container-name{
+        height: 90vh;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
 
     /* Atur tampilan sesuai dengan kebutuhan Anda */
@@ -388,11 +414,7 @@ section .container-skills .Skill .list-skill svg path {
         height: 2px;
     }
 
-    section .container-about {
-        flex-direction: column;
-        justify-content: center;
-        gap: 10em;
-    }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -409,8 +431,8 @@ section .container-skills .Skill .list-skill svg path {
     section .container-name .ibnu h1::before {
         height: 2px;
     }
-    
-    section .container-skills .Skill .list-skill{
+
+    section .container-skills .Skill .list-skill {
         flex-direction: column;
     }
 }
@@ -437,17 +459,18 @@ section .container-skills .Skill .list-skill svg path {
 
 
 /* if screen hight 510 */
-@media screen and (max-height:600px){
-    html{
+@media screen and (max-height:600px) {
+    html {
         font-size: 40%;
     }
 }
 
-@media screen and (max-height:300px){
-    html{
+@media screen and (max-height:300px) {
+    html {
         font-size: 40%;
     }
-    section .container-skills .Skill{
+
+    section .container-skills .Skill {
         font-size: 90%;
     }
 }
