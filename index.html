@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IBNU</title>
+    <link class = "titleIcon" rel="icon" href="/ASET/VECTOR_PORTOFLIO.svg">
     <!-- Import CSS -->
     <link rel="stylesheet" href="/CSS/RESET.css">
     <link rel="stylesheet" href="/CSS/style.css">
@@ -23,12 +24,11 @@
     <div class="overlay">
         <div class="nav">
             <ul>
-                <li>LOREM</li>
-                <li>LOREM</li>
-                <li>LOREM</li>
-                <li>LOREM</li>
-                <li>LOREM</li>
-                <li>LOREM</li>
+                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('landing-page')">LADING PAGE</a></li>
+                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('name')">NAME</a></li>
+                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('about')">ABOUT</a></li>
+                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('interts')">INTERTES</a></li>
+                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('skills')">SKILLS</a></li>
             </ul>
         </div>
         <div class="sosial-media">
@@ -42,19 +42,19 @@
         </div>
     </div>
     <div class="container">
-        <section class="sectionPORT hidden-fade">
+        <section class="sectionPORT hidden-fade" id="landing-page">
             <div class="container-portoflio">
                 <img src="/ASET/VECTOR_PORTOFLIO.svg" alt="">
             </div>
         </section>
-        <section class="hidden-fade">
+        <section class="hidden-fade" id="name">
             <div class="container-name">
                 <div class="ibnu">
                     <h1>IBNU.</h1>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="about">
             <div class="container-about">
                 <main class="hidden-right">
                     <h2>ABOUT</h2>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="interts">
             <div class="container-interts">
                 <div class="interts hidden-left">
                     <h2>INTERTS</h2>
@@ -145,7 +145,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="skills">
             <div class="container-skills">
                 <main class="hidden-right">
                     <h2>SKILLS</h2>
