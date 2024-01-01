@@ -3,7 +3,7 @@
     --backgroundInvers: #181818;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
 }
@@ -51,19 +51,20 @@ body {
 
 
 
-.nav, .sosial-media{
+.nav,
+.sosial-media {
     cursor: pointer;
     position: fixed;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
 }
 
-.nav{
+.nav {
     margin: 0 0 0 2%;
 }
 
 
-.nav ul li a{
+.nav ul li a {
     margin: 3vh 0em 3vh 0em;
     writing-mode: vertical-lr;
     text-decoration: none;
@@ -77,12 +78,12 @@ body {
 
 
 
-.nav ul li a:hover{
+.nav ul li a:hover {
     color: #181818;
     transform: scale(1.3);
 }
 
-.nav ul li .active{
+.nav ul li .active {
     color: #181818;
     transform: scale(1.3);
 }
@@ -114,7 +115,7 @@ body {
     background-color: #181818;
 } */
 
-.sosial-media::after{
+.sosial-media::after {
     content: '';
     display: block;
     width: .1em;
@@ -122,7 +123,7 @@ body {
     background-color: #181818;
 }
 
-.sosial-media::before{
+.sosial-media::before {
     content: '';
     display: block;
     width: .1em;
@@ -187,7 +188,6 @@ section .container-about {
 }
 
 section .container-about main h2,
-.container-skills main h2,
 section .container-skills main h2 {
     font-size: 6em;
     margin: 1.4em 0em .3em 0rem;
@@ -268,6 +268,8 @@ section .container-interts .layer .list-item .item h3 {
 
 section .container-skills {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 section .container-skills main p {
@@ -276,9 +278,8 @@ section .container-skills main p {
 }
 
 section .container-skills .Skill {
-    height: 80%;
+    height: inherit;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -420,6 +421,18 @@ section .container-skills .Skill .list-skill svg path {
 }
 
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: .5;
+}
+
+footer p {
+    padding: .5em;
+    text-align: center;
+}
+
 
 /* Responsif */
 /* Tampilan responsif untuk perangkat dengan lebar 1025px hingga 1440px (tablet besar dan layar laptop) */
@@ -453,7 +466,7 @@ section .container-skills .Skill .list-skill svg path {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     /* Atur tampilan sesuai dengan kebutuhan Anda */
     html {
