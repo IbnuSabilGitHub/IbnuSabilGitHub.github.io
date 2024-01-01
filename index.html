@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IBNU</title>
-    <link class = "titleIcon" rel="icon" href="/ASET/VECTOR_PORTOFLIO.svg">
+    <link class="titleIcon" rel="icon" href="/ASET/VECTOR_PORTOFLIO.svg">
     <!-- Import CSS -->
     <link rel="stylesheet" href="/CSS/RESET.css">
     <link rel="stylesheet" href="/CSS/style.css">
@@ -21,26 +21,26 @@
 </head>
 
 <body>
-    <div class="overlay">
-        <div class="nav">
-            <ul>
-                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('landing-page')">LADING PAGE</a></li>
-                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('name')">NAME</a></li>
-                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('about')">ABOUT</a></li>
-                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('interts')">INTERTES</a></li>
-                <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('skills')">SKILLS</a></li>
-            </ul>
-        </div>
-        <div class="sosial-media">
-            <span class="line-up"></span>
-            <div class="icon">
-                <a href=""><i class="fa-brands fa-pinterest"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
-            </div>
-            <span class="line-down"></span>
-        </div>
+    <div class="nav">
+        <ul>
+            <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('landing-page')">LADING
+                    PAGE</a></li>
+            <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('name')">NAME</a></li>
+            <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('about')">ABOUT</a></li>
+            <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('interts')">INTERTES</a></li>
+            <li><a href="javascript:void(0);" class="txtNav" onclick="scrollToSection('skills')">SKILLS</a></li>
+        </ul>
     </div>
+    <div class="sosial-media">
+        <span class="line-up"></span>
+        <div class="icon">
+            <a href="https://pin.it/2FtL7xO" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://www.instagram.com/_ibnuuudesign_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/IbnuSabilGitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <span class="line-down"></span>
+    </div>
+
     <div class="container">
         <section class="sectionPORT hidden-fade" id="landing-page">
             <div class="container-portoflio">
@@ -244,5 +244,32 @@
     </div>
 </body>
 <script src="JS/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        title: "The website is still under development,",
+        html: `and some sections may contain placeholder text (lorem ipsum) or temporary functionality. We're actively working to address any remaining bugs. Please share your feedback and suggestions for improvement via email at <u>sabilalzahari@gmail.com</u>. `,
+        footer: "Alert will close in <b></b> milliseconds.",
+        timer: 10000,
+        timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading();
+            const timer = Swal.getPopup().querySelector("b");
+            timerInterval = setInterval(() => {
+                timer.textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+        },
+        willClose: () => {
+            clearInterval(timerInterval);
+        }
+    }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("alert was closed by the timer");
+        }
+    });
+
+
+</script>
 
 </html>
