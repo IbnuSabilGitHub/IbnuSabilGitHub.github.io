@@ -33,7 +33,9 @@ body {
     overflow: clip;
 }
 
-
+h2{
+    text-transform: capitalize;
+}
 /* {
     position: fixed;
     top: 0;
@@ -281,13 +283,13 @@ section .container-skills .Skill {
     height: inherit;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 section .container-skills .Skill .list-skill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
     gap: 7em;
 }
 
