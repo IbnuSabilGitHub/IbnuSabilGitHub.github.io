@@ -33,9 +33,10 @@ body {
     overflow: clip;
 }
 
-h2{
+h2 {
     text-transform: capitalize;
 }
+
 /* {
     position: fixed;
     top: 0;
@@ -190,12 +191,14 @@ section .container-about {
 }
 
 section .container-about main h2,
-section .container-skills main h2 {
+section .container-skills main h2,
+section .container-project main h2 {
     font-size: 6em;
     margin: 1.4em 0em .3em 0rem;
 }
 
-section .container-about main p {
+section .container-about main p,
+section .container-project main p {
     width: 40rem;
 }
 
@@ -209,7 +212,6 @@ section .container-interts {
 section .container-interts .interts h2 {
     font-size: 6em;
     margin: 0em 0em .3em 0rem;
-
 
 }
 
@@ -225,7 +227,7 @@ section .container-interts .interts {
 
 
 
-section .container-about .element {
+section .container-about .element, section .container-project .element {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,7 +424,51 @@ section .container-skills .Skill .list-skill svg path {
     transform: translateY(0);
 }
 
+section .container-project {
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;    
+}
 
+section .container-project main{
+    align-items: flex-start;
+
+    text-align: right;
+}
+
+section .container-project main p {
+    float: right;
+}
+section .container-project .element{
+    width:100%;
+}
+
+
+section .container-project .element img{
+    width: 20em;
+}
+
+
+section .list-project{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(44em, 0fr));
+    gap: 4em;
+    justify-items: center;
+    justify-content: center;
+}
+
+section .list-project .item{
+    background-color: var(--backgroundInvers);
+    width: 45em;
+    height: 25em;
+    border-radius: 1em;
+    transition: 400ms 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+section .list-project .item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #181818 ;
+}
 footer {
     position: fixed;
     bottom: 0;
@@ -483,6 +529,12 @@ footer p {
         height: 2px;
     }
 
+    section .container-project{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10em;
+    }
+
 
 }
 
@@ -531,6 +583,10 @@ footer p {
 @media screen and (max-height:600px) {
     html {
         font-size: 40%;
+    }
+
+    section .container-project{
+        flex-direction: row-reverse;
     }
 }
 
