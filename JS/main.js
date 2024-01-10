@@ -1,5 +1,4 @@
 // Animation Scroll
-
 function createIntersectionObserver(className) {
     return new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -13,25 +12,28 @@ function createIntersectionObserver(className) {
     });
 }
 
-
+// for animation fade
 const observerFade = createIntersectionObserver('animation-fade');
 const elementAnimationFade = document.querySelectorAll('.hidden-fade');
 elementAnimationFade.forEach((el) => observerFade.observe(el));
 
+// for animation right
 const observerRight = createIntersectionObserver('animation-right');
 const elementAnimationRight = document.querySelectorAll('.hidden-right');
 elementAnimationRight.forEach((al) => observerRight.observe(al))
 
+// for animation left
 const observeLeft = createIntersectionObserver('animation-left');
 const elementAnimationLeft = document.querySelectorAll('.hidden-left');
 elementAnimationLeft.forEach((el) => observeLeft.observe(el));
 
+// for animation up
 const observeUp = createIntersectionObserver('animation-up');
 const elementAnimationUp = document.querySelectorAll('.hidden-up');
 elementAnimationUp.forEach((el) => observeUp.observe(el));
 
-const parentSkill = document.querySelector('.list-skill')
 
+const parentSkill = document.querySelector('.list-skill')
 var children = parentSkill.children
 var plusTimeDelay = 200
 for (var i = 0; i < children.length; i++) {
@@ -42,8 +44,6 @@ for (var i = 0; i < children.length; i++) {
 
 const sections = document.querySelectorAll('section')
 const textNavbar = document.querySelectorAll('.txtNav')
-console.log(textNavbar)
-
 
 // Fungsi active section
 function updateActiveSection() {
@@ -63,12 +63,32 @@ function updateActiveSection() {
 
 window.addEventListener('scroll', updateActiveSection);
 
-updateActiveSection();
+updateActiveSection(); // calling function
 
 
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+}
+
+// switch paragraph
+const paragraph = document.querySelector('.paragraph');
+const triggerParagraph = document.getElementById('trigger-description');
+
+
+let statusParagraph = false
+triggerParagraph.addEventListener('click', function () {
+    if (statusParagraph) {
+        paragraph.style.display = 'none'
+        triggerParagraph.innerHTML = 'Allow description'
+        statusParagraph = false
+    }else{
+        paragraph.style.display = 'block'
+        triggerParagraph.innerHTML = 'Hide description'
+        statusParagraph = true
+    }
+})
+
+
