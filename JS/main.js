@@ -74,21 +74,27 @@ function scrollToSection(sectionId) {
 }
 
 // switch paragraph
-const paragraph = document.querySelector('.paragraph');
-const triggerParagraph = document.getElementById('trigger-description');
+const paragraph = document.querySelectorAll('.paragraph');
+const triggerParagraph = document.querySelectorAll('.trigger-description');
 
+const display = document.querySelectorAll('#displayProject')
 
 let statusParagraph = false
-triggerParagraph.addEventListener('click', function () {
-    if (statusParagraph) {
-        paragraph.style.display = 'none'
-        triggerParagraph.innerHTML = 'Allow description'
-        statusParagraph = false
-    }else{
-        paragraph.style.display = 'block'
-        triggerParagraph.innerHTML = 'Hide description'
-        statusParagraph = true
-    }
-})
 
+triggerParagraph.forEach((e, index) => {
+    e.addEventListener('click', function () {
+        if (statusParagraph) {
+            paragraph[index].style.display = 'none'
+            e.children[1].classList.remove('fa-solid')
+            e.children[1].classList.add('fa-regular')
+            statusParagraph = false
+        } else {
+            paragraph[index].style.display = 'block'
+            e.children[1].classList.remove('fa-regular')
+            e.children[1].classList.add('fa-solid')
+            statusParagraph = true
+        }
+    })
+
+})
 
