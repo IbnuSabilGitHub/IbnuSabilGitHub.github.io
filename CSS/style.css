@@ -7,11 +7,14 @@
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+
 }
 
 body {
     background-color: var(--background);
+    -webkit-overflow-scrolling: touch;
     font-family: 'Questrial', sans-serif;
+
 }
 
 ::-webkit-scrollbar {
@@ -467,7 +470,7 @@ section .list-project .item {
     height: 25em;
     border-radius: 1em;
     overflow: hidden;
-    transition: all 200ms;
+    /* transition: all 200ms; */
 }
 
 section .list-project .item .description {
@@ -483,8 +486,8 @@ section .list-project .item .description .title h6 {
     font-size: 2em;
 }
 
-section .list-project .item .description .title .trigger-description{
-    display:inline-flex;
+section .list-project .item .description .title .trigger-description {
+    display: inline-flex;
     gap: .6em;
     color: var(--background);
 
@@ -501,7 +504,7 @@ section .list-project .item .description .title .trigger-description p:hover {
     opacity: 1;
 }
 
-section .list-project .item .description .title .trigger-description i{
+section .list-project .item .description .title .trigger-description i {
     font: .4em;
 }
 
@@ -531,9 +534,34 @@ section .list-project .item .description .paragraph {
 }
 
 section .list-project .item:hover {
-    transform: scale(1.05);
+    transform: rotate();
     box-shadow: 0 0 10px #181818;
+    animation: hoverShake alternate 200ms;
 }
+
+
+@keyframes hoverShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 
 footer {
     position: fixed;

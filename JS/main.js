@@ -48,6 +48,7 @@ const textNavbar = document.querySelectorAll('.txtNav')
 // Fungsi active section
 function updateActiveSection() {
     const scrollPosition = window.scrollY;
+    console.log(parseInt(scrollPosition))
 
     sections.forEach((section, index) => {
         const sectionTop = section.offsetTop;
