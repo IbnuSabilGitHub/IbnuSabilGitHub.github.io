@@ -263,7 +263,6 @@ section .container-interts .layer .list-item .item {
     transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: var(--background);
     padding: 1.5em;
-
 }
 
 section .container-interts .layer .list-item .item:hover {
