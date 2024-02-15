@@ -17,6 +17,10 @@ body {
 
 }
 
+strong{
+    font-weight: bold;
+}
+
 ::-webkit-scrollbar {
     width: .6em;
     background-color: var(--background);
@@ -204,6 +208,7 @@ section .container-project main h2 {
 section .container-about main p,
 section .container-project main p {
     width: 40rem;
+    text-indent: 1em;
 }
 
 section .container-interts {
@@ -271,6 +276,7 @@ section .container-interts .layer .list-item .item:hover {
 
 section .container-interts .layer .list-item .item h3 {
     font-size: 2em;
+    font-weight: bold;
     margin-bottom: .5em;
 }
 
@@ -436,7 +442,6 @@ section .container-project {
 
 section .container-project main {
     align-items: flex-start;
-
     text-align: right;
 }
 
