@@ -1,7 +1,7 @@
 :root {
     --background: #FFFFFE;
     --backgroundInvers: #181818;
-    --hightLight: #3da9fc;
+    --hightLight: #2cb67d;
 }
 
 html {
@@ -460,32 +460,35 @@ section .list-project {
     gap: 4em;
     justify-items: center;
     justify-content: center;
+
 }
 
-section .list-project .item {
+section .list-project .itemProject {
     position: relative;
     background-color: var(--backgroundInvers);
     width: 45em;
     height: 25em;
-    border-radius: 1em;
+    border-radius: .6em;
     overflow: hidden;
-    /* transition: all 200ms; */
 }
 
-section .list-project .item .description {
+section .list-project .itemProject .description {
     position: absolute;
     bottom: 2em;
     left: 2em;
     color: var(--background);
     transition: all 200ms;
     z-index: 1;
+
+    transition: all 500ms;
 }
 
-section .list-project .item .description .title h6 {
-    font-size: 2em;
+section .list-project .itemProject .description .title h6 {
+    font-size: 1.8em;
+
 }
 
-section .list-project .item .description .title .trigger-description {
+section .list-project .itemProject .description .title .trigger-description {
     display: inline-flex;
     gap: .6em;
     color: var(--background);
@@ -493,50 +496,51 @@ section .list-project .item .description .title .trigger-description {
 }
 
 
-section .list-project .item .description .title .trigger-description p {
+section .list-project .itemProject .description .title .trigger-description p {
     cursor: pointer;
     font-weight: bold;
     opacity: .8;
 }
 
-section .list-project .item .description .title .trigger-description p:hover {
+section .list-project .itemProject .description .title .trigger-description p:hover {
     opacity: 1;
 }
 
-section .list-project .item .description .title .trigger-description i {
+section .list-project .itemProject .description .title .trigger-description i {
     font: .4em;
 }
 
-section .list-project .item .description .paragraph {
-    margin-top: .5em;
+section .list-project .itemProject .description .paragraph {
+    margin-top: 1.2em;
     font-size: .8em;
     font-weight: lighter;
+    width: 70%;
     display: none;
+    transition: opacity 0.3s, visibility 0.3s;
+    
+}
+section .list-project .itemProject:hover .paragraph{
+    display: block;
 }
 
 
 
 
-.list-project .item img {
+
+.list-project .itemProject img {
     width: 100%;
     display: block;
 }
 
-.list-project .item::before {
+.list-project .itemProject::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 55.15%, #000 99.75%);
-}
-
-section .list-project .item:hover {
-    transform: rotate();
-    box-shadow: 0 0 10px #181818;
-    animation: hoverShake alternate 200ms;
-}
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 55.15%, #000 99.75%)
+};
 
 
 @keyframes hoverShake {
