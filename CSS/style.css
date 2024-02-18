@@ -165,6 +165,7 @@ section .container-portoflio img {
 section .container-name .ibnu h1 {
     font-size: 15em;
     position: relative;
+    text-transform: uppercase   ;
 }
 
 section .container-name .ibnu h1::after {
@@ -257,7 +258,9 @@ section .container-interts .layer {
 
 }
 
-
+section .container-interts .layer .list-item .item p{
+    font: .8em;
+}
 section .container-interts .layer .list-item .item {
     margin: 1.5em 1.5em;
     width: 25em;
@@ -268,6 +271,7 @@ section .container-interts .layer .list-item .item {
     transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     color: var(--background);
     padding: 1.5em;
+    overflow: auto;
 }
 
 section .container-interts .layer .list-item .item:hover {
@@ -472,7 +476,7 @@ section .list-project {
 section .list-project .itemProject {
     position: relative;
     background-color: var(--backgroundInvers);
-    width: 45em;
+    max-width: 45em;
     height: 25em;
     border-radius: .6em;
     overflow: hidden;
@@ -492,37 +496,15 @@ section .list-project .itemProject .description .title h6 {
 
 }
 
-section .list-project .itemProject .description .title .trigger-description {
-    display: inline-flex;
-    gap: .6em;
-    color: var(--background);
-
-}
-
-
-section .list-project .itemProject .description .title .trigger-description p {
-    cursor: pointer;
-    font-weight: bold;
-    opacity: .8;
-}
-
-section .list-project .itemProject .description .title .trigger-description p:hover {
-    opacity: 1;
-}
-
-section .list-project .itemProject .description .title .trigger-description i {
-    font: .4em;
-}
-
 section .list-project .itemProject .description .paragraph {
     margin-top: 1.2em;
-    font-size: .8em;
-    font-weight: lighter;
     width: 70%;
     display: none;
-
+    font-size: .8em;
 
 }
+
+
 
 section .list-project .itemProject:hover .paragraph {
     display: block;
@@ -672,6 +654,10 @@ footer p {
     section .container-skills .Skill .list-skill {
         flex-direction: column;
     }
+    section .list-project .itemProject .description .paragraph {
+        width: 90%;
+        font-size: 5px;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -680,18 +666,6 @@ footer p {
     html {
         font-size: 25%;
     }
-
-    /* section .container-name .ibnu h1::after {
-        width: 2px;
-    }
-
-    section .container-name .ibnu h1::before {
-        height: 2px;
-    }
-    
-    section .container-skills .Skill .list-skill{
-        flex-direction: column;
-    } */
 }
 
 
